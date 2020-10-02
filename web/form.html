@@ -6,48 +6,48 @@
 </head>
 <body>
 
-    <form>
+    <form action="http://localhost:8080" method="get">
         <h1 align="center">用户注册</h1>
         <table align="center" >
             <tr>
                 <td>用户名称：</td>
-                <td><input type="text"/></td>
+                <td><input name="username" type="text"/></td>
             </tr>
             <tr>
                 <td>用户密码：</td>
-                <td> <input type="password"/></td>
+                <td> <input name="password" type="password"/></td>
             </tr>
             <tr>
                 <td>确认密码：</td>
-                <td><input type="password"/></td>
+                <td><input name="repass" type="password"/></td>
             </tr>
             <tr>
                 <td>性别:</td>
-                <td> <input type="radio" name="sex" checked="checked">男
-                    <input type="radio" name="sex">女
+                <td> <input type="radio" value="boy" name="sex" checked="checked">男
+                     <input type="radio" value="girl" name="sex">女
                 </td>
             </tr>
             <tr>
                 <td>爱好:</td>
                 <td>
-                    <input type="checkbox">Java
-                    <input type="checkbox">Python
-                    <input type="checkbox">C#
-                    <input type="checkbox">PHP
+                    <input name="hobby" value="java" type="checkbox">Java
+                    <input name="hobby" value="python" type="checkbox">Python
+                    <input name="hobby" value="c#" type="checkbox">C#
+                    <input name="hobby" value="php" type="checkbox">PHP
             </tr>
             <tr>
                 <td>国籍</td>
                 <td>
                     <select>
-                        <option>China</option>
-                        <option>USA</option>
-                        <option>UK</option>
+                        <option name="country" value="china">China</option>
+                        <option name="country" value="usa">USA</option>
+                        <option name="country" value="uk">UK</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td>自我评价:</td>
-                <td> <textarea></textarea></td>
+                <td> <textarea name="selfjudge"></textarea></td>
             </tr>
             <tr>
                 <td>重置</td>
