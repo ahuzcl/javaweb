@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+    <script type="text/javascript">
+        /**
+         *  /[a,b,c]/ 表示字符串中是否包含字母a,或b,或c
+         *  /[a-z]/ 表示字符是否包含所有小写字母 A-Z同理，数字同理
+         *
+         *  \w 表示查找单词字符：包括a-z A-Z 0-9 以及下划线
+         *  至少包含一个a  /a+/
+         *  a*:至少包含0个或多个a
+         *  a?:包含0个或1个
+         *  ^a:开头为a
+         *  a{X} 匹配包含X个n序列的字符串
+         */
+        var pattern = /a{3}/;
+        alert(pattern.test("aa"));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

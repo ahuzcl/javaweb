@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        /**
+         * 当用户点击了校验按钮后，获取输入框内容，并判断是否合法。
+         * 验证规则：必须由字母，数字，下划线组成，长度为5～12位。
+         */
+        function onclickFun() {
+            var element = document.getElementById("username");
+            //alert(element.value);
+            var inputUserName = element.value;
+            var styleElement = document.getElementById("span");
+            var pattern = /^\w{5,12}$/;
+            if (pattern.test(inputUserName)){
+                alert("用户名合法");
+            }
+            else {
+                alert("用户名不合法！")
+            }
+        }
+
+    </script>
+</head>
+<body>
+<form action="http://localhost:8080" method="get">
+    <h1 align="center">用户注册</h1>
+    <table align="center" >
+        <tr>
+            <td>用户名称：</td>
+            <td><input name="username" type="text" id="username"/>
+                <button onclick="onclickFun()">校验合法性</button>
+                <span id="span" style="color: red"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>用户密码：</td>
+            <td> <input name="password" type="password"/></td>
+        </tr>
+        <tr>
+            <td>确认密码：</td>
+            <td><input name="repass" type="password"/></td>
+        </tr>
+        <tr>
+            <td>性别:</td>
+            <td> <input type="radio" value="boy" name="sex" checked="checked">男
+                <input type="radio" value="girl" name="sex">女
+            </td>
+        </tr>
+        <tr>
+            <td>爱好:</td>
+            <td>
+                <input name="hobby" value="java" type="checkbox">Java
+                <input name="hobby" value="python" type="checkbox">Python
+                <input name="hobby" value="c#" type="checkbox">C#
+                <input name="hobby" value="php" type="checkbox">PHP
+        </tr>
+        <tr>
+            <td>国籍</td>
+            <td>
+                <select>
+                    <option name="country" value="china">China</option>
+                    <option name="country" value="usa">USA</option>
+                    <option name="country" value="uk">UK</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>自我评价:</td>
+            <td> <textarea name="selfjudge"></textarea></td>
+        </tr>
+        <tr>
+            <td>重置</td>
+            <td><input type="reset"></td>
+            <td> 提交</td>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
