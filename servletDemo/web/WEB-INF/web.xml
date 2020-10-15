@@ -24,6 +24,14 @@
         <servlet-name>HelloHttpServlet</servlet-name>
         <servlet-class>com.cunliang.servlet.HelloHttpServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>HelloIdeaServlet</servlet-name>
+        <servlet-class>com.cunliang.servlet.HelloIdeaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloIdeaServlet</servlet-name>
+        <url-pattern>/hello3</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>HelloHttpServlet</servlet-name>
         <url-pattern>/hello2</url-pattern>
