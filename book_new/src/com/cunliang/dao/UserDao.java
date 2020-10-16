@@ -4,6 +4,7 @@ import com.cunliang.pojo.User;
 
 public interface UserDao {
 
+
     /**
      *
      * @param username
